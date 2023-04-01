@@ -25,9 +25,7 @@ def get_tweets(username):
 
     # 200 tweets to be extracted
     number_of_tweets = 200
-    # tweets = api.user_timeline(screen_name=username)
-    # for i in range(number_of_tweets):
-    #     tweets = api.user_timeline(screen_name=username, page = i)
+
     tweets = api.user_timeline(screen_name=username, count=number_of_tweets)
 
     # Empty Array
@@ -65,7 +63,6 @@ def get_tweet_sentiment(tweet):
 
 
 def count_frequency_tweet_sentiments(my_list):
-    # Creating an empty dictionary
     freq = {}
     for item in my_list:
         if item in freq:
