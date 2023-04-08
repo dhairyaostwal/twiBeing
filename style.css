@@ -1,0 +1,10 @@
+.container {
+  padding: 0.5rem;
+  background-color: #202020;
+  border: none;
+  margin: 0%;
+  color: #f1f1f1;
+  width: 300px;
+  height: max-content;
+  font-family: 'Poppins';
+}

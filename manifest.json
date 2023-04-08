@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "twiBeing",
+  "version": "1.0",
+  "description": "Check if a Twitter account is good for your mental health.",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["activeTab", "storage", "tabs", "https://api.twitter.com/*"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Check Mental Health",
+    "default_icon": "icons/icon128.png",
+    "default_popup": "popup.html"
+  }
+}
