@@ -12,12 +12,17 @@ from util.TweetProcessing import (
 )
 from flask import Flask
 from flask_restful import Resource, Api
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+# CORS(app)
+cors = CORS(app, resources={r"/predict/*": {"origins": "*"}})
+app.config['CORS_HEADERS'] = 'Content-Type'
 api = Api(app)
 
 
 class tweet_process_and_compute_result(Resource):
+    @cross_origin()
     def get(self, username):
         # to check for 404 error
         try:
